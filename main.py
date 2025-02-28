@@ -3,8 +3,8 @@ import requests
 import smtplib
 
 SMTP_ADDRESS = "smtp.gmail.com"
-MY_EMAIL = "bhupeshshinde1243@gmail.com"
-MY_PASSWORD = "eltifhrptvlwtuuv"
+MY_EMAIL = ""
+MY_PASSWORD = ""
 
 product_url = "https://www.amazon.in/dp/B0D49W5KZP/?coliid=I3NGFNVLIAC28R&colid=3OOJRLK5D8OZQ&ref_=list_c_wl_lv_ov_lig_dp_it&th=1"
 
@@ -43,7 +43,7 @@ if price < BUY_PRICE:
         connection.login(MY_EMAIL, MY_PASSWORD)
         connection.sendmail(
             from_addr=MY_EMAIL,
-            to_addrs="basshinde1215@gmail.com",
+            to_addrs="",
             msg=f"Subject:Amazon Price Alert!\n\n{message}\n{product_url}".encode("utf-8")
         )
     print("The email was sent successfully!!")
